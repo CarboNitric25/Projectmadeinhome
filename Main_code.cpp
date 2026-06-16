@@ -6,7 +6,7 @@ namespace ns1 {
 	int is_declared = 0;
 	string var1;
 	string mainlineinput;
-	string closesyskeyword = "sys -exit";
+	string closesyskeyword = "sys-exit";
 	string programendedmsg = "-/The program is ended.";
 };
 
@@ -17,7 +17,7 @@ std::string InputSystem() {
 		cout << "$- ";
 		getline(cin, mainlineinput);
 		mainlineinput.erase(remove(mainlineinput.begin(), mainlineinput.end(), ' '), mainlineinput.end());
-		if (mainlineinput == "sys -out, msg:") {
+		if (mainlineinput == "sys-out, msg:") {
 			cout << "-> msg: ";
 			string msg;
 			getline(cin, msg);
@@ -29,7 +29,7 @@ std::string InputSystem() {
 			};
 			
 		}
-		else if (mainlineinput == "sys -exit") {
+		else if (mainlineinput == "sys-exit") {
 			continue;
 		}
 		else if (mainlineinput == "") {

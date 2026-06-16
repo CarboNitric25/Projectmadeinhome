@@ -5,6 +5,8 @@
 namespace ns1 {
 	using namespace std;
 	int is_declared = 0;
+	string choice;
+	string mainl;
 	string var1;
 	string mainlineinput;
 	string closesyskeyword = "sys-exit";
@@ -18,7 +20,7 @@ std::string InputSystem() {
 		cout << "$- ";
 		getline(cin, mainlineinput);
 		mainlineinput.erase(remove(mainlineinput.begin(), mainlineinput.end(), ' '), mainlineinput.end());
-		if (mainlineinput == "sys-out, msg:") {
+		if (mainlineinput == "sys-out,msg:") {
 			cout << "-> msg: ";
 			string msg;
 			getline(cin, msg);
@@ -37,11 +39,10 @@ std::string InputSystem() {
 			cout << "-> Please enter a letter or number etc.\n";
 		}
 		else if (mainlineinput == "sys-input") {
-			cout<<"-input: ";
-			string mainl;
+			cout << "-input: ";
 			getline(cin, mainl);
-			cout << "-Please select a way to use this input: -asg or -done: ";
-			string choice;
+			cout << "-Please select a way to use this input: -asg or -done: \n";
+			cout << "$- ";
 			getline(cin, choice);
 			if (choice == "-asg") {
 				var1 = mainl;
@@ -52,7 +53,7 @@ std::string InputSystem() {
 				continue;
 			}
 			else {
-				cout << "->Please choose a valid input.\n";
+				cout << "The variable changes was discarded.\n";
 			};
 		}
 		else {

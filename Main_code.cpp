@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 namespace ns1 {
 	using namespace std;
@@ -35,7 +36,7 @@ std::string InputSystem() {
 		else if (mainlineinput == "") {
 			cout << "-> Please enter a letter or number etc.\n";
 		}
-		else if (mainlineinput == "sys -input") {
+		else if (mainlineinput == "sys-input") {
 			cout<<"-input: ";
 			string mainl;
 			getline(cin, mainl);

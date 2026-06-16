@@ -16,6 +16,7 @@ std::string InputSystem() {
 	do {
 		cout << "$- ";
 		getline(cin, mainlineinput);
+		mainlineinput.erase(remove(mainlineinput.begin(), mainlineinput.end(), ' '), mainlineinput.end());
 		if (mainlineinput == "sys -out, msg:") {
 			cout << "-> msg: ";
 			string msg;
